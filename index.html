@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="x5-fullscreen" content="true">
+    <meta name="format-detection" content="telphone=no" />
+    <title>野生凹凸曼聚集地</title>
+    <script>
+        window.onload=function(){
+            (function(){
+                var html = document.documentElement;
+                var hwidth = html.getBoundingClientRect().width;
+                html.style.fontSize = hwidth/16 + "px";
+                var box = document.querySelector('#io');
+                window.addEventListener('devicemotion', function(e) {
+                    var motion = e.accelerationIncludingGravity;
+                    var x = Math.round(motion.x);
+                    var y = Math.round(motion.x);
+                    var z = Math.round(motion.x);
+                    box.innerHTML="|x: "+x+" | ";
+                    box.innerHTML+=" y: "+y+" | ";
+                    box.innerHTML+=" z: "+z+" | ";
+                })
+                var bo = document.querySelector('#po');
+                window.addEventListener('devicemotion', function(e) {
+                    var motion = e.accelerationIncludingGravity;
+                    var x = motion.x;
+                    var y = motion.x;
+                    var z = Math.round(motion.x);
+                    bo.innerHTML="<br/>x: "+x;
+                    bo.innerHTML+="<br/>y: "+y;
+                    bo.innerHTML+="<br/>z: "+z;
+                })
+            })()
+        }
+    </script>
+    <style>
+        #ip {
+            background-image: url(QQ图片20190108003529.jpg);
+            background-size: 100%;
+            border-radius: 0.5rem;
+            height: 10.24rem;
+            width: 13.64rem;
+            position: relative;
+            margin: auto;
+            margin-top: 2rem;
+        }
+        #io{
+            margin: auto auto;  
+            text-align: center;
+            color: #ffffff;
+            width: 100%;
+            height: 1.2rem;
+            background: red;
+            bottom: 0;
+            position: absolute;
+            border-radius: 0 0 0.5rem 0.5rem;
+        }
+        #po{
+            width: 13.64rem;
+            height: 5rem;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="ip">
+        <div id="io">
+
+        </div>
+    </div>
+    <div id="po">
+
+    </div>
+</body>
+</html>
