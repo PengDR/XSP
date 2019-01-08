@@ -32,6 +32,8 @@
                     bo.innerHTML="<br/>x: "+x;
                     bo.innerHTML+="<br/>y: "+y;
                     bo.innerHTML+="<br/>z: "+z;
+                    var pp = document.getElementById('ip');
+                    pp.style.transform="rotate("+(x+y)+"deg)"
                 })
             })()
         }
@@ -46,6 +48,7 @@
             position: relative;
             margin: auto;
             margin-top: 2rem;
+            box-shadow: 2px 2px 2px 2px #999;
         }
         #io{
             margin: auto auto;  
